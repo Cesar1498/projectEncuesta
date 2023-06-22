@@ -4,16 +4,28 @@ import myObservationQuestion from "./components/observationQuestion.js";
 window.customElements.define("my-star", myStarTypeQuestion);
 window.customElements.define("my-observation", myObservationQuestion);
 
-const changeRating = document.querySelectorAll('input[name=rating]');
-changeRating.forEach((radio) => {
-  radio.addEventListener('change', getRating);
+//#region Calificación de Estrellas
+/* Funciones para Calificación de Estrellas */
+$('.formStar').click(function () {
+  //nombre del form donde se le da click
+  const nameFormStar = $(this).prop('name');
+  // Me trae el objeto de form
+  const formStar = document.getElementsByName(nameFormStar);
+  Array.from(formStar).forEach(item => {
+    Array.from(item).forEach((radio) =>{
+      radio.addEventListener('change', getRating(nameFormStar, radio));
+    })
+  })
 });
 
 // buscar el radiobutton checked y armar el texto con el valor ( 0 - 5 )
-function getRating() {
-  let estrellas = document.querySelector('input[name=rating]:checked').value;
-  document.getElementById("texto").innerHTML = (
-    0 < estrellas ? estrellas + " estrella" + (1 < estrellas ? "s" : "") : "sin calificar"
-  );
-  // opcionalmente agregar un ajax para guardar el rating
+function getRating(nameFormStar, radio) {
+  let estrellas = 0;
+  if (radio.checked) {
+    estrellas = radio.value;
+    document.getElementById(nameFormStar + "texto").innerHTML = (
+      0 < estrellas ? estrellas + " estrella" + (1 < estrellas ? "s" : "") : "sin calificar"
+    );
+  }
 }
+//#endregion

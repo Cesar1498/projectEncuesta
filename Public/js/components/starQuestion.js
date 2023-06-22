@@ -16,54 +16,59 @@ class myStarTypeQuestion extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-        <form name="formStar" class="formStar">
-            <p> ${this.name} </p>
-            <!-- svg from https://es.wikipedia.org/wiki/Archivo:Star*.svg -->
-            <div class="estrellas">
-                <input class=rating id=rating0 type=radio value=0 name=rating checked />
-                
-                <label class=star for=rating1>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275">
-                        <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
-                    </svg>
-                </label>
-                <input class=rating id=rating1 type=radio value=1 name=rating />
+        <form name="formStar${this.order}" class="formStar">
+            <div class="row p-4 m-4 rounded" style="background: rgb(217, 236, 255); border:2px solid rgb(3, 55, 109)">
+                <div class="col-sm-8">
+                    <p class="text-right"> ${this.name} </p>
+                </div>
+                <div class="col-sm-4">
+                    <!-- svg from https://es.wikipedia.org/wiki/Archivo:Star*.svg -->
 
-                <label class=star for=rating2>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275">
-                        <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
-                    </svg>
-                </label>
-                <input class=rating id=rating2 type=radio value=2 name=rating />
+                    <input class="rating" id=formStar${this.order}rating0 type=radio value=0 name=formStar${this.order}rating checked />
+                    
+                    <label class=star for=formStar${this.order}rating1>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275" width="30" height="30">
+                            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+                        </svg>
+                    </label>
+                    <input class="rating" id=formStar${this.order}rating1 type=radio value=1 name=formStar${this.order}rating />
 
-                <label class=star for=rating3>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275">
-                        <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
-                    </svg>
-                </label>
-                <input class=rating id=rating3 type=radio value=3 name=rating />
+                    <label class=star for=formStar${this.order}rating2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275" width="30" height="30">
+                            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+                        </svg>
+                    </label>
+                    <input class=rating id=formStar${this.order}rating2 type=radio value=2 name=formStar${this.order}rating />
 
-                <label class=star for=rating4>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275">
-                        <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
-                    </svg>
-                </label>
-                <input class=rating id=rating4 type=radio value=4 name=rating />
+                    <label class=star for=formStar${this.order}rating3>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275" width="30" height="30">
+                            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+                        </svg>
+                    </label>
+                    <input class=rating id=formStar${this.order}rating3 type=radio value=3 name=formStar${this.order}rating />
 
-                <label class=star for=rating5>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275">
-                        <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
-                    </svg>
-                </label>
-                <input class=rating id=rating5 type=radio value=5 name=rating />
+                    <label class=star for=formStar${this.order}rating4>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275" width="30" height="30">
+                            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+                        </svg>
+                    </label>
+                    <input class=rating id=formStar${this.order}rating4 type=radio value=4 name=formStar${this.order}rating />
 
-                <!-- por último el label del rating 0 ( sin calificar ) -->
-                <label class=reset for=rating0>reset</label>
+                    <label class=star for=formStar${this.order}rating5>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 275" width="30" height="30">
+                            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+                        </svg>
+                    </label>
+                    <input class=rating id=formStar${this.order}rating5 type=radio value=5 name=formStar${this.order}rating />
 
-                <div id=texto>sin calificar</div>
+                    <!-- por último el label del rating 0 ( sin calificar ) -->
+                    <label class="reset p-2 text-center w-25 rounded-2" style="background: rgb(3, 55, 109); color: white; font-size: .8rem;" for=formStar${this.order}rating0>reset</label>
+
+                    <div id=formStar${this.order}texto>sin calificar</div>
+                </div>
             </div>
         </form>
-        `;
+            `;
     }
 }
 

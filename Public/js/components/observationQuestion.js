@@ -16,9 +16,15 @@ class myObservationQuestion extends HTMLElement{
     
     connectedCallback() {
         this.innerHTML = `
-        <form name="formPregunta">
-            <p> ${this.name} </p>
-            <textarea id="myTextArea" rows="2" cols="60"></textarea>
+        <form name="formPregunta" class="formPregunta">
+            <div class="row p-4 m-4 rounded-2" style="background: rgb(217, 236, 255); border:2px solid rgb(3, 55, 109)">
+                <div class="col-sm-8">
+                    <p class="text-right"> ${this.name} </p>
+                </div>
+                <div class="col-sm-4">
+                    <textarea class="form-control" id="myTextArea" rows="2" cols="8"></textarea>
+                </div>
+            </div>
         </form>
         `;
     }
