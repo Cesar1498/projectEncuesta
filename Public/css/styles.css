@@ -64,9 +64,9 @@ label {
 
   /* estrellas a la derecha del radiobutton checked van blanco */ 
   input[type=radio]:checked~label.star svg path {
-    fill: #fff;
+    fill: #a8a3a3;
   } 
-
+  
 /* Estilos para preguntas de observaciones */
 
 #myTextArea {

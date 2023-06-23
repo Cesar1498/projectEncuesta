@@ -15,5 +15,6 @@
             }
         ?>
         <my-observation name="Agrega tus observaciones" order="0"></my-observation>
+        <my-yesorno name="¿Haz utilizado los beneficios de estar afiliado?" order="0"></my-yesorno>
     </section>
 </div>
