@@ -1,3 +1,8 @@
+<!-- César González 
+    26/06/2023
+    Archivo donde se insertan las preguntas
+-->
+
 <div class="principal positio-relative m-auto mt-5">
     <h3 class="mb-4"> ¡Bienvenido Juan Perez! </h3>
     <section class="p-4 mb-4 rounded" style="border: 2px solid rgb(3, 55, 109)">
@@ -11,10 +16,10 @@
             );
 
             foreach ($array as $key => $value) { ?>
-                <my-star name="<?php echo $value ?>" order="<?php echo $key ?>"></my-star> <?php 
+                <my-star name="<?php echo $value ?>" order="<?php echo $key ?>" level="0"></my-star> <?php 
             }
         ?>
-        <my-observation name="Agrega tus observaciones" order="0"></my-observation>
-        <my-yesorno name="¿Haz utilizado los beneficios de estar afiliado?" order="0"></my-yesorno>
+        <my-observation name="Agrega tus observaciones" order="0" level="0"></my-observation>
+        <my-yesorno name="¿Haz utilizado los beneficios de estar afiliado?" order="0" level="0"></my-yesorno>
     </section>
 </div>
