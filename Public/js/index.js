@@ -48,25 +48,25 @@ $('.formStar').click(function () {
   function addNextQuestions(nameFormStar){
     const array = [{
       order: 0,
-      pregunta: "¿Qué te pareció el material?"
+      pregunta: '¿Qué&nbspte&nbsppareció&nbspel&nbspmaterial?',
     },
     {
       order: 1,
-      pregunta: "¿Qué te pareció la información"
+      pregunta: '¿Qué&nbspte&nbsppareció&nbspla&nbspinformación',
     },
     {
       order: 2,
-      pregunta: "Agrgegar observaciones"
+      pregunta: 'Agrgegar&nbspobservaciones',
     }];
 
-    let newElement = document.createElement('div'); 
-    newElement.innerHTML = '<hr class="col-xs-12 w-75">';
+    let newElement = document.createElement('null'); 
+    newElement.innerHTML = `<hr class="col-xs-12 w-75">`;
     array.forEach((item) => {  
       if (!item.pregunta.includes("Agrgegar observaciones")){
-        newElement.innerHTML += "<my-star name=" + item.pregunta + " order=" + item.order + " level=1></my-star>";
+        newElement.innerHTML += `<my-star name=${item.pregunta} order=${item.order} level=1></my-star>`;
       }
       else{
-        newElement.innerHTML += "<my-observation name=" + item.pregunta + " order=" + item.order + " level=1></my-observation>";
+        newElement.innerHTML += `<my-observation name=${item.pregunta} order=${item.order} level=1></my-observation>`;
       }
     }); 
     document.getElementById(nameFormStar).appendChild(newElement);

@@ -6,8 +6,8 @@
 class myStarTypeQuestion extends HTMLElement {
     constructor() {
         super();
-        this.name;
-        this.order;
+        this.name = null;
+        this.order = null;
     }
 
     static get observedAttributes() {
@@ -22,13 +22,13 @@ class myStarTypeQuestion extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <form name="formStar${this.level}${this.order}" class="formStar" id="formStar${this.level}${this.order}">
-            <div class="row p-4 m-4 rounded" style="background: rgb(217, 236, 255); border:2px solid rgb(3, 55, 109)">
-                <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
-                    <p class="mt-4 text-center"> ${this.name} </p>
+            <div class="divLevel${this.level} row p-2 m-4 rounded" style="background: rgb(217, 236, 255); border:2px solid rgb(3, 55, 109)">
+                <div class="col-sm-4 col-md-4 col-lg-6 col-xl text-wrap">
+                    <p class="m-4 text-sm-start text-break"> ${this.name} </p>
                 </div>
-                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6 py-2">
                     <!-- svg from https://es.wikipedia.org/wiki/Archivo:Star*.svg -->
-                    <div class="w-100 text-center">
+                    <div class="w-100 text-end">
                         <input class="rating" id=formStar${this.level}${this.order}rating0 type=radio value=0 name=formStar${this.level}${this.order}rating checked />
                     
                         <label class="star" for=formStar${this.level}${this.order}rating1>
@@ -67,10 +67,10 @@ class myStarTypeQuestion extends HTMLElement {
                         <input class=rating id=formStar${this.level}${this.order}rating5 type=radio value=5 name=formStar${this.level}${this.order}rating />
 
                         <!-- por último el label del rating 0 ( sin calificar ) -->
-                        <label class="reset text-center rounded-2" style="background: rgb(3, 55, 109); color: white; font-size: .8rem;" for=formStar${this.order}rating0>reset</label>    
+                        <label class="reset text-center rounded-2" style="background: rgb(3, 55, 109); color: white; font-size: .8rem;" for=formStar${this.level}${this.order}rating0>reset</label>    
                     </div>
                     
-                    <div class="text-center w-100" id=formStar${this.level}${this.order}texto>sin calificar</div>
+                    <div class="text-end" id=formStar${this.level}${this.order}texto>sin calificar</div>
                 </div>
             </div>
         </form>

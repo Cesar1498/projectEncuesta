@@ -79,6 +79,19 @@ label {
     left: 20%;
   }
 
+  .divLevel1{
+    width: 75%;
+    position: relative;
+    left: 20%;
+  }
+
+
+  /*
+  @media screen and (max-width: ){
+    
+  }*/
+
+
 /* Estilos para preguntas de observaciones */
 
 #myTextArea {
