@@ -23,10 +23,10 @@ class myStarTypeQuestion extends HTMLElement {
         this.innerHTML = `
         <form name="formStar${this.level}${this.order}" class="formStar" id="formStar${this.level}${this.order}">
             <div class="divLevel${this.level} row p-2 m-4 rounded" style="background: rgb(217, 236, 255); border:2px solid rgb(3, 55, 109)">
-                <div class="col-sm-4 col-md-4 col-lg-6 col-xl text-wrap">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 text-wrap">
                     <p class="m-4 text-sm-start text-break"> ${this.name} </p>
                 </div>
-                <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6 py-2">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 py-2">
                     <!-- svg from https://es.wikipedia.org/wiki/Archivo:Star*.svg -->
                     <div class="w-100 text-end">
                         <input class="rating" id=formStar${this.level}${this.order}rating0 type=radio value=0 name=formStar${this.level}${this.order}rating checked />

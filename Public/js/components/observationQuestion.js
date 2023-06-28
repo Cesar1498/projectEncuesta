@@ -22,7 +22,7 @@ class myObservationQuestion extends HTMLElement{
                     <p class="m-4 text-sm-start text-break"> ${this.name} </p>
                 </div>
                 <div class="col-sm-8 col-md-8 col-lg-6 col-xl-6">
-                    <textarea class="form-control" id="myTextArea" rows="2" cols="2"></textarea>
+                    <textarea class="form-control" id="myTextArea" rows="2" cols="2" placeholder="Escribe algún comentario"></textarea>
                 </div>
             </div>
         </form>
