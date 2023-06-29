@@ -3,10 +3,10 @@
     Archivo que controla la calificación de la pregunta de estrellas
 */
 
-
 //#region Calificación de Estrellas
 /* Funciones para Calificación de Estrellas */
 lista = [];
+
 window.addEventListener("click", function(e){
     if(e.target.name != undefined){
         let nameFormStar = e.target.name;
@@ -20,7 +20,7 @@ window.addEventListener("click", function(e){
                 radio.addEventListener('change', getRating(nameFormStar, radio, incluye));
             })
         })
-        console.log(e);
+    
         if (!incluye)
             lista.push(nameFormStar);
     }
